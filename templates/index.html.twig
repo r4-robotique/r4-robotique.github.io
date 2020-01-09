@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="alert alert-info">
+        Ci-dessous, retrouvez la liste des plateformes robotiques développées sur le campus de
+        Bordeaux.
+    </div>
+
+	<div class="row">
+
+		<div class="col-12 col-sm-6 col-lg-4">
+			<div class="card m-2">
+				<img src="{{ asset('img/sigmaban.jpg') }}" class="card-img-top" alt="Sigmaban">
+				<div class="card-body">
+					<h5 class="card-title">Sigmaban</h5>
+					<p class="card-text">
+						Plateforme humanoïde de petite taille créée par l'équipe rhoban
+					</p>
+					<a href="#" class="float-right btn btn-primary">Plus d'informations &rarr;</a>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+{% endblock %}

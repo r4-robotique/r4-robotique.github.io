@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="intro">
+		<b>ASPIC</b>:
+		<em>Autonomous System, Pereption Interaction and Control</em>
+	</div>
+
+	<center>
+		<div class="date-big">
+			<div class="date">
+				<div class="date-img">
+					<img src="{{ asset('img/cal.png') }}"/>
+				</div>
+				<div class="date-text">
+					<a href="http://aspic.labri.fr/ical.php">
+						Synchronisez votre agenda avec l'ICAL suivant:
+					</a><br/>
+					<kbd>http://robotique.labri.fr/ical.php</kbd><br/>
+					Et/ou inscrivez vous à la
+					<a target="_blank" href="https://diff.u-bordeaux.fr/sympa/info/labri.aspic">
+						liste de diffusion
+					</a>
+				</div>
+			</div>
+		</div>
+	</center>
+
+	{% for event in events %}
+		<div class="card m-2
+                        {% if 'now'|date('U') > event.date_end|date('U') %}
+                        inactive
+                        {% endif %}">
+			<div class="card-body">
+				<h5 class="card-title">
+					{{ event.title|raw }}
+				</h5>
+				{% if event.speakers %}
+					<em>
+						{{ event.speakers }}
+					</em>
+				{% endif %}
+				{% if event['visio'] is defined %}
+					{% if event.speakers %}<br/>
+					{% endif %}
+					<em>
+						<a href="{{ event.visio }}">Accéder à la visio</a>
+						(<a href="https://renavisio.renater.fr/user_guide?lang=fr">aide</a>)
+					</em>
+				{% endif %}
+
+				{% if event.docs %}
+					<br/>
+					<em>
+						{% for file, doc in event.docs %}
+							<img src="{{ asset('img/download.png') }}"/>
+							<a target="_blank" href="{{ asset('files/'~file) }}">{{ doc }}</a>
+							<br/>
+						{% endfor %}
+					</em>
+				{% endif %}
+			</div>
+			<div class="card-footer">
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="date">
+							<div class="date-img mr-2"><img src="{{ asset('img/calendar.png') }}"></div>
+							<div class="date-text">
+                                {{ event.date_start|date('d M Y') }}<br/>
+                                {{ event.date_start|date('H:i') }}h&rarr;{{ event.date_end|date('H:i') }}h
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 text-right">
+						{{ event.where }}
+						<img class="ml-2" src="{{ asset('img/house.png') }}">
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+
+{% endblock %}

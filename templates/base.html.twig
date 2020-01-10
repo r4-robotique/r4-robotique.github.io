@@ -4,15 +4,16 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Document</title>
+		<title>Robotique</title>
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('bootstrap/css/bootstrap.min.css') }}"/>
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}"/>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div class="container">
 			<center>
-				<img src="{{ asset('img/titre.png') }}" />
+				<img src="{{ asset('img/titre.png') }}"/>
 			</center>
 
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
@@ -23,14 +24,14 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="#">Plateformes</a>
+						<li class="nav-item {% if route == '/' %}active{% endif %}">
+							<a class="nav-link" href="{{ path('/') }}">Plateformes</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Formation</a>
+						<li class="nav-item {% if route == '/formations' %}active{% endif %}">
+							<a class="nav-link" href="{{ path('/formations') }}">Formations</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Groupe de travail "ASPIC"</a>
+						<li class="nav-item {% if route == '/groupe-de-travail' %}active{% endif %}">
+							<a class="nav-link" href="{{ path('/groupe-de-travail') }}">Groupe de travail "ASPIC"</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Presse</a>
@@ -41,13 +42,16 @@
 
 			{% block body %}{% endblock %}
 
-            <hr/>
+			<hr/>
 
-            <center>
-                <a href="#"><img width="150" src="{{ asset('img/ub.svg') }}" /></a>
-                <a href="#"><img width="150" src="{{ asset('img/inp.png') }}" /></a>
-                <a href="#"><img width="150" src="{{ asset('img/aquitaine_robotics.svg') }}" /></a>
-            </center>
+			<footer>
+				<center>
+					<a href="#"><img width="150" src="{{ asset('img/ub.svg') }}"/></a>
+					<a href="#"><img width="150" src="{{ asset('img/inp.png') }}"/></a>
+					<a href="#"><img width="150" src="{{ asset('img/aquitaine_robotics.svg') }}"/></a>
+                    <a href="#"><img width="150" src="{{ asset('img/ims.png') }}"/></a>
+				</center>
+			</footer>
 		</div>
 
 		<script type="text/javascript" src="{{ asset('bootstrap/js/jquery.min.js') }}"></script>

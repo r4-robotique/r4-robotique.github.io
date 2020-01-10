@@ -1,4 +1,43 @@
 
 body {
     background-image:url('bg.png');
+    font-family: 'Montserrat', sans-serif;
+}
+
+.platforms {
+    align-items:stretch !important;
+    justify-content: center;
+}
+
+.platform-card {
+    flex-grow: 1;
+}
+
+.intro {
+    font-size:120%;
+    font-style: italic;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+footer a {
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.training-img {
+    margin-right:15px;
+}
+
+.date {
+    display:flex;
+}
+
+.date-big {
+    display:flex;
+    justify-content: center;
+}
+
+.inactive {
+    opacity:0.80;
 }

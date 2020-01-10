@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="intro">
+		Voici la liste des formations robotique disponibles sur le campus universitaires de
+		        Bordeaux.
+	</div>
+
+	<div class="list-group">
+		<a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100">
+                <div class="training-img">
+                <img src="{{ asset('img/small-iut.png') }}" />
+                </div>
+                <div>
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Parcours robotique de l'IUT</h5>
+                        <small>BAC+2</small>
+                    </div>
+                    <p class="mb-1">
+                        En intégrant le département GMP, GEII, Informatique ou MP de l'IUT de Bordeaux, il est possible
+                        pour les étudiants de candidater pour participer au parcours robotique multi-départements.
+                    </p>
+                    <small></small>
+                </div>
+            </div>
+		</a>
+		<a href="https://www.u-bordeaux.fr/formation/2018/PRMA_68/informatique" target="_blank" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100">
+                <div class="training-img">
+                    <img src="{{ asset('img/small-ub.png') }}" />
+                </div>
+                <div>
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Master ASPIC</h5>
+                        <small class="text-muted">BAC+5</small>
+                    </div>
+                    <p class="mb-1">
+                        Le Master ASPIC (<em>Autonomous Systems, Perception, Interaction and Control</em>) est une spécialité
+                        de Master 2 atteignable dans l'UF informatique de la faculté de Bordeaux.<br/>
+                        Elle se focalise sur la perception (traitement d'images), le contrôle de drones et de robots mobiles.
+                    </p>
+                </div>
+            </div>
+		</a>
+		<a href="https://ccc.bordeaux-inp.fr/syllabus/index.php?annee=2019&mode=consultation&chemin=60100_60062_60061_59949_59625&langue=1" target="_blank" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100">
+                <div class="training-img">
+                    <img src="{{ asset('img/small-inp.png') }}" />
+                </div>
+                <div>
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Option robotique et apprentissage (ENSEIRB-MATMECA)</h5>
+                        <small class="text-muted">BAC+5</small>
+                    </div>
+                    <p class="mb-1">
+                        L'option robotique est apprentissage est une spécialité d'ingénierie, ouverte aux étudiants de
+                        Bordeaux INP (ENSEIRB-MATMECA, ENSC).
+                    </p>
+                    </div>
+            </div>
+		</a>
+	</div>
+
+{% endblock %}

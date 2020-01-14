@@ -18,7 +18,7 @@
         ],
         [
             'name' => 'e-Tract',
-            'description' => "Tracteur éléctrique intelligent (Elatec & Rhoban)",
+            'description' => "Tracteur éléctrique et blocs outils agricoles intelligent (Elatec & Rhoban)",
             'img' => 'etrac.png',
         ],
         [

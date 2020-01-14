@@ -4,6 +4,12 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+.title {
+    font-size:180%;
+    padding:5px;
+}
+
 .platforms {
     align-items:stretch !important;
     justify-content: center;

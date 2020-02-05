@@ -5,7 +5,8 @@ include 'vendor/autoload.php';
 $routes = [
     '/' => ['index.html.twig', 'plateformes.php'],
     '/formations' => ['formations.html.twig'],
-    '/groupe-de-travail' => ['groupe-de-travail.html.twig', 'events.php']
+    '/groupe-de-travail' => ['groupe-de-travail.html.twig', 'events.php'],
+    '/presse' => ['presse.html.twig', 'presse.php']
 ];
 
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');

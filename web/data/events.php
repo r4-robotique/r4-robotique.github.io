@@ -8,10 +8,7 @@ return [
             'date_start' => '2018-11-29 14:00',
             'date_end' => '2018-11-29 16:00',
             'where' => 'Amphi du LaBRI',
-            'visio' => 'http://desktop.visio.renater.fr/scopia?ID=728157***1234&autojoin',
-            'docs' => [
-                '2020-gp.pdf' => 'Ligues Soccer (Grégoire Passault)'
-            ]
+            'visio' => 'http://desktop.visio.renater.fr/scopia?ID=728157***1234&autojoin'
         ],
         [
             'title' => 'Introduction aux <a href="https://fr.wikipedia.org/wiki/Cartographie_et_localisation_simultan%C3%A9es">méthodes SLAM</a>
@@ -20,21 +17,14 @@ return [
             'date_start' => '2018-10-17 14:00',
             'date_end' => '2018-10-17 16:00',
             'where' => 'Amphi du LaBRI',
-            'visio' => 'http://desktop.visio.renater.fr/scopia?ID=722712***1234&autojoin',
-            'docs' => [
-                'slam-nutshell.pdf' => 'SLAM in a nutshell (slides de Antoine Billy)',
-                'cartographer.pdf' => 'Algorithme Cartographer (slides de Rémi Fabre)'
-            ]
+            'visio' => 'http://desktop.visio.renater.fr/scopia?ID=722712***1234&autojoin'
         ],
         [
             'title' => 'Programmation quadratique pour les robots humanoïdes.',
             'speakers' => 'Quentin Rouxel',
             'date_start' => '2018-10-16 14:00',
             'date_end' => '2018-10-16 16:00',
-            'where' => 'Amphi du LaBRI',
-            'docs' => [
-                'qp.pdf' => 'Slides de Quentin Rouxel'
-            ]
+            'where' => 'Amphi du LaBRI'
         ]
     ],
 ];

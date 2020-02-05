@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	{% for year, entries in presse %}
+		<center>
+			<h3 class="text-muted mt-4">{{ year }}</h3>
+		</center>
+		<div class="list-group">
+			{% for entry in entries %}
+				<a href="{{ entry.url }}" target="_blank" class="list-group-item list-group-item-action
+                {% if loop.index%2 == 0 %}bg-grey{% endif %}
+                ">
+					<div class="d-flex w-100">
+						{% if entry.img %}
+							<div class="training-img">
+								<img src="{{ asset('img/presse/'~entry.img) }}"/>
+							</div>
+						{% endif %}
+						<div class="w-100">
+
+							<div class="d-flex w-100 justify-content-between">
+								<div>
+									<h5 class="mb-1">
+										{{ entry.title }}
+									</h5>
+
+									<p class="mb-1 text-muted">
+										{{ entry.media }}
+									</p>
+								</div>
+								<small>
+									{% if entry.month %}
+										{{ entry.month }}
+									{% endif %}
+                                    
+									{% if 'video' in entry and entry.video %}
+										<br/>
+										<center><img class="presse-logo" src="{{ asset('img/video.png') }}"/></center>
+                                    {% elseif 'audio' in entry and entry.audio %}
+										<br/>
+										<center><img class="presse-logo" src="{{ asset('img/audio.png') }}"/></center>
+									{% endif %}
+								</small>
+							</div>
+						</div>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	{% endfor %}
+
+{% endblock %}

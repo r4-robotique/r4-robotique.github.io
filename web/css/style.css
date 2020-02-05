@@ -31,8 +31,20 @@ footer a {
     margin-right:10px;
 }
 
-.training-img {
+footer img {
+    opacity:0.5;
+}
+
+footer img:hover {
+    opacity:1;
+}
+
+.training-img, .presse-img {
     margin-right:15px;
+}
+
+.presse-logo {
+    opacity:0.5;
 }
 
 .date {
@@ -46,4 +58,8 @@ footer a {
 
 .inactive {
     opacity:0.80;
+}
+
+.bg-grey {
+    background-color:#fafafa;
 }

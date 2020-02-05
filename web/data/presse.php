@@ -32,6 +32,14 @@ return [
                 'title' => "Robocup : les Français de Rhoban champions du monde pour la 4e fois avant l'édition 2020 à Bordeaux",
                 'url' => "https://objectifaquitaine.latribune.fr/innovation/2019-07-10/robocup-les-francais-de-rhoban-champions-du-monde-pour-la-4e-fois-avant-l-edition-2020-a-bordeaux-823195.html",
                 'img' => 'latribune.png',
+            ],
+
+            [
+                'month' => 'Juillet',
+                'media' => 'clubic',
+                'title' => "Les Français de Rhoban remportent la coupe du monde de football des robots",
+                'url' => "https://www.clubic.com/robotique/actualite-864176-francais-rhoban-remportent-coupe-monde-foot-robots.html",
+                'img' => 'clubic.png'
             ]
         ],
 
@@ -56,6 +64,13 @@ return [
 
         '2017' => [
             [
+                'month' => 'Juillet',
+                'media' => 'Sud Ouest',
+                'title' => 'Vidéo. Une équipe bordelaise championne du monde de foot de robots humanoïdes',
+                'url' => 'https://www.sudouest.fr/2017/07/31/une-equipe-bordelaise-championne-du-monde-de-foot-de-robots-humanoides-3659865-4725.php',
+                'img' => 'sudouest.png',
+            ],
+            [
                 'month' => 'Août',
                 'media' => 'RMC Découverte',
                 'title' => "La chronique d'Anthony Morel : La France championne du monde de foot robotique",
@@ -71,7 +86,6 @@ return [
                 'url' => 'https://www.huffingtonpost.fr/entry/les-francais-remportent-la-coupe-du-monde-de-football-de-robo_fr_5c92fb84e4b06857fcbcb30c',
                 'img' => 'huffingtonpost.png',
             ],
-
             [
                 'month' => 'Mai',
                 'media' => 'Sud Ouest',
@@ -133,6 +147,13 @@ return [
                 'title' => 'Les robots ont aussi leur coupe du monde de football',
                 'url' => 'https://www.lepoint.fr/high-tech-internet/les-robots-ont-aussi-leur-coupe-du-monde-de-football-22-07-2014-1848157_47.php',
                 'img' => 'lepoint.png',
+            ],
+            [
+                'month' => 'Juillet',
+                'media' => 'Europe 1',
+                'title' => 'Rhoban, candidat français à la Coupe du monde des robots',
+                'url' => 'https://www.europe1.fr/technologies/Rhoban-candidat-francais-a-la-Coupe-du-monde-des-robots-664818',
+                'img' => 'europe1.png'
             ],
             [
                 'month' => 'Juin',

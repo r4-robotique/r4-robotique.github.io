@@ -2,30 +2,69 @@
 
 {% block body %}
 
-	<div class="intro">
-        Voici la liste des plateformes robotiques développées et maintenues par des acteurs du
-        campus universitaire de Bordeaux.
+<div class="jumbotron mb-2">
+  <h1 class="display-8">
+    Robotics research in Nouvelle-Aquitaine, France
+  </h1>
+  <p class="lead">
+    R4 is a regional robotics network involving 11 research entities in the region of Nouvelle-Aquitaine,
+    France. The objective of the network is to boost research activities, mainly through a weekly
+    <a href="{{ path('/working-group') }}">working group</a>.
+  </p>
+</div>
+
+<div id="r4-map"></div>
+
+<h2 class="mt-2">Network members</h2>
+
+<div class="row d-flex align-items-stretch">
+{% for entity in entities %}
+    {% for entry in entity['entries'] %}
+    <div class="col-sm-6 col-lg-4 p-2">
+    <div class="card h-100">
+        <div class="card-header">
+            <span class="card-title">{{ entry['name'] }}</span>
+            <br/>
+            <small class="text-muted">
+            {{ entity['name'] }}
+            </small>
+        </div>
+        <div class="card-body">
+            <p class="card-text text-center">
+                <a href="{{ entry['url'] }}" target="_blank">
+                    <img src="{{ asset('img/'~entry['logo']) }}" alt="logo" class="logo">
+                </a>
+            </p>
+        </div>
+        <br/>
     </div>
+    </div>
+    {% endfor %}
+{% endfor %}
+</div>
 
-	<div class="row platforms">
+{% endblock %}
 
-        {% for plateforme in plateformes %}
-		<div class="col-12 col-sm-6 col-lg-4 align-items-stretch d-flex">
-			<div class="card m-2 platform-card">
-				<img src="{{ asset('img/'~plateforme.img) }}" class="card-img-top" alt="Sigmaban">
-				<div class="card-body">
-					<h5 class="card-title">{{ plateforme.name }}</h5>
-					<p class="card-text">
-						{{ plateforme.description }}
-					</p>
-				</div>
-                <div class="card-footer">
-					<a href="#" class="float-right btn btn-primary">Plus d'informations &rarr;</a>
-                </div>
-			</div>
-		</div>
-        {% endfor %}
-
-	</div>
-
+{% block javascripts %}
+<script type="text/javascript">
+var entities = [
+{% for entity in entities %}
+    {% if entity['position'] is defined %}
+    {
+        'name': '{{ entity['name'] }}',
+        'position': [{{ entity['position'][0] }}, {{ entity['position'][1] }}]
+    },
+    {% endif %}
+    {% for entry in entity['entries'] %}
+    {% if entry['position'] is defined %}
+    {
+        'name': '{{ entry['name'] }}',
+        'position': [{{ entry['position'][0] }}, {{ entry['position'][1] }}]
+    },
+    {% endif %}
+    {% endfor %}
+{% endfor %}
+];
+</script>
+<script type="text/javascript" src="{{ asset('js/r4-map.js') }}"></script>
 {% endblock %}

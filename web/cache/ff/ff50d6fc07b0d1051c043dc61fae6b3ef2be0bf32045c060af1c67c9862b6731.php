@@ -138,6 +138,6 @@ class __TwigTemplate_ea47d4dc74f6dea2bd8b4e380dead79de83c4ab9fcd826be29786739c8c
 
     public function getSourceContext()
     {
-        return new Source("", "formations.html.twig", "/home/gregwar/robotique.labri.fr/templates/formations.html.twig");
+        return new Source("", "formations.html.twig", "/home/gregwar/robotique.labri.fr/web/templates/formations.html.twig");
     }
 }

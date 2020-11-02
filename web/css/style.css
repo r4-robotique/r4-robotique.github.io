@@ -33,6 +33,7 @@ footer a {
 
 footer img {
     opacity:0.5;
+    width:120px;
 }
 
 footer img:hover {
@@ -62,4 +63,15 @@ footer img:hover {
 
 .bg-grey {
     background-color:#fafafa;
+}
+
+#r4-map {
+  width: 100%;
+  height:500px;
+}
+
+
+.logo {
+    max-width:200px;
+    max-height:100px;
 }

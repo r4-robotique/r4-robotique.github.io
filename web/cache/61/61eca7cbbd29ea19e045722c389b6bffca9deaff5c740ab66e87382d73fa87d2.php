@@ -227,6 +227,6 @@ class __TwigTemplate_604eb8085e9efb519767c00d7e2d49dde8f291ec5ee3400bd9ee35c3348
 
     public function getSourceContext()
     {
-        return new Source("", "groupe-de-travail.html.twig", "/home/gregwar/robotique.labri.fr/templates/groupe-de-travail.html.twig");
+        return new Source("", "groupe-de-travail.html.twig", "/home/gregwar/robotique.labri.fr/web/templates/groupe-de-travail.html.twig");
     }
 }

@@ -3,11 +3,15 @@
 include 'vendor/autoload.php';
 
 $routes = [
-    '/' => ['index.html.twig', 'plateformes.php'],
+    '/' => ['index.html.twig', 'entities.php'],
+    '/working-group' => ['working-group.html.twig', 'events.php'],
+
     '/formations' => ['formations.html.twig'],
-    '/groupe-de-travail' => ['groupe-de-travail.html.twig', 'events.php'],
-    '/presse' => ['presse.html.twig', 'presse.php']
+    '/presse' => ['presse.html.twig', 'presse.php'],
+    '/contact' => ['contact.html.twig']
 ];
+
+/////////////////////////////////////////////////////////////////////////////
 
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
 $route = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';

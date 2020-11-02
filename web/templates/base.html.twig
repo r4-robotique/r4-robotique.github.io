@@ -4,19 +4,24 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Robotique</title>
+		<title>Réseau Régional de Recherche en Robotique - Nouvelle Aquitaine</title>
 
+    <link rel="icon" href="{{ asset('favicon.ico') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('bootstrap/css/bootstrap.min.css') }}"/>
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}"/>
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('js/leaflet.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('js/cluster/dist/MarkerCluster.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('js/cluster/dist/MarkerCluster.Default.css') }}"/>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/leaflet.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/cluster/dist/leaflet.markercluster.js') }}"></script>
+    {% block javascripts %}{% endblock %}
 	</head>
 	<body>
-		<div class="container">
-			<center class="title">
-                Plateformes pour la recherche robotique bordelaise
-			</center>
-
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
 				<a class="navbar-brand" href="#">&nbsp;</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -25,33 +30,48 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item {% if route == '/' %}active{% endif %}">
-							<a class="nav-link" href="{{ path('/') }}">Plateformes</a>
+							<a class="nav-link" href="{{ path('/') }}">Presentation</a>
 						</li>
-						<li class="nav-item {% if route == '/formations' %}active{% endif %}">
+						<li class="nav-item {% if route == '/working-group' %}active{% endif %}">
+							<a class="nav-link" href="{{ path('/working-group') }}">Working group</a>
+						</li>
+						{# <li class="nav-item {% if route == '/formations' %}active{% endif %}">
 							<a class="nav-link" href="{{ path('/formations') }}">Formations</a>
-						</li>
-						<li class="nav-item {% if route == '/groupe-de-travail' %}active{% endif %}">
-							<a class="nav-link" href="{{ path('/groupe-de-travail') }}">Groupe de travail "ASPIC"</a>
 						</li>
 						<li class="nav-item {% if route =='/presse' %}active{% endif %}">
 							<a class="nav-link" href="{{ path('/presse') }}">Presse</a>
+						</li> #}
+            <li class="nav-item {% if route =='/contact' %}active{% endif %}">
+							<a class="nav-link" href="{{ path('/contact') }}">Contact</a>
 						</li>
 					</ul>
 				</div>
+
+        <a href="/" class="navbar-brand">
+          <img src="{{ asset('img/logo-sm.png') }}"/>
+        </a>
+        </div>
 			</nav>
+
+    <div class="container">
 
 			{% block body %}{% endblock %}
 
 			<hr/>
 
-			<footer>
-				<center>
-					<a href="#"><img width="150" src="{{ asset('img/ub.svg') }}"/></a>
-					<a href="#"><img width="150" src="{{ asset('img/inp.png') }}"/></a>
-					<a href="#"><img width="150" src="{{ asset('img/aquitaine_robotics.svg') }}"/></a>
-                    <a href="#"><img width="150" src="{{ asset('img/ims.png') }}"/></a>
-				</center>
-			</footer>
+    <footer class="pb-5">
+        <center>
+            <a href="https://www.u-bordeaux.fr/" target="_blank"><img src="{{ asset('img/ub.svg') }}"/></a>
+            <a href="https://www.bordeaux-inp.fr/" target="_blank"><img src="{{ asset('img/inp.png') }}"/></a>
+            <a href="https://www.inria.fr/en/centre-bordeaux-sud-ouest" target="_blank"><img src="{{ asset('img/inria.png') }}"/></a>
+            <a href="https://www.estia.fr/" target="_blank"><img src="{{ asset('img/estia.svg') }}"/></a>
+            <a href="https://www.univ-pau.fr/" target="_blank"><img src="{{ asset('img/pau.png') }}"/></a>
+            <a href="https://www.unilim.fr/" target="_blank"><img src="{{ asset('img/limoges.png') }}"/></a>
+            <a href="https://www.univ-poitiers.fr/" target="_blank"><img src="{{ asset('img/poitiers.jpeg') }}"/></a>
+            <a href="https://www.univ-larochelle.fr/" target="_blank"><img src="{{ asset('img/la-rochelle.png') }}"/></a>
+            <a href="https://artsetmetiers.fr/en/campus/bordeaux-talence" target="_blank"><img src="{{ asset('img/ensam.png') }}"/></a>
+        </center>
+    </footer>
 		</div>
 
 		<script type="text/javascript" src="{{ asset('bootstrap/js/jquery.min.js') }}"></script>

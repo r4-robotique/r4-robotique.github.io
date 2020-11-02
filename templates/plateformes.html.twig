@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row platforms">
+
+    {% for plateforme in plateformes %}
+            <div class="col-12 col-sm-6 col-lg-4 align-items-stretch d-flex">
+                    <div class="card m-2 platform-card">
+                            <img src="{{ asset('img/'~plateforme.img) }}" class="card-img-top" alt="Sigmaban">
+                            <div class="card-body">
+                                    <h5 class="card-title">{{ plateforme.name }}</h5>
+                                    <p class="card-text">
+                                            {{ plateforme.description }}
+                                    </p>
+                            </div>
+            <div class="card-footer">
+                                    <a href="#" class="float-right btn btn-primary">Plus d'informations &rarr;</a>
+            </div>
+                    </div>
+            </div>
+    {% endfor %}
+
+    </div>
+
+{% endblock %}

@@ -3,27 +3,27 @@
     [
         [
             'name' => 'Sigmaban',
-            'description' => "Plateforme humanoïde de petite taille (Rhoban)",
+            'description' => "Small-size humanoid robot (Rhoban)",
             'img' => 'sigmaban.png',
         ],
         [
             'name' => 'Ultraban',
-            'description' => "Robot humanoïde taille adulte en cours de développement (Rhoban)",
+            'description' => "Adult-size humanoid robot (Rhoban)",
             'img' => 'jambe-ultraban.png',
         ],
         [
             'name' => 'Metabot & Holo',
-            'description' => "Robots éducatifs à pattes et à roues (Rhoban)",
+            'description' => "Educative robots (Rhoban)",
             'img' => 'metabot-holo.png',
         ],
         [
             'name' => 'e-Tract',
-            'description' => "Tracteur éléctrique et blocs outils agricoles intelligent (Elatec & Rhoban)",
+            'description' => "Electric tractor with smart weeding device (Elatec & Rhoban)",
             'img' => 'etrac.png',
         ],
         [
             'name' => 'SSL',
-            'description' => "Robots Small-Size League holonomes (NaMEC & Rhoban)",
+            'description' => "Small-size league holonomous robots (NaMEC & Rhoban)",
             'img' => 'ssl.png',
         ],
     ],

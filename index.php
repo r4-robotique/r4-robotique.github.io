@@ -8,7 +8,11 @@ $routes = [
 
     '/formations' => ['formations.html.twig'],
     '/presse' => ['presse.html.twig', 'presse.php'],
-    '/contact' => ['contact.html.twig']
+    '/contact' => ['contact.html.twig'],
+
+    '/plateformes' => ['plateformes.html.twig', 'plateformes.php'],
+    '/formations' => ['formations.html.twig', 'formations.php'],
+    '/presse' => ['presse.html.twig', 'presse.php'],
 ];
 
 /////////////////////////////////////////////////////////////////////////////
@@ -25,7 +29,7 @@ if (!isset($routes[$route])) {
 }
 
 $twig->addFunction(new \Twig\TwigFunction('path', function ($route) {
-    return $_SERVER['SCRIPT_NAME'] . $route;
+    return $route;
 }));
 $twig->addFunction(new \Twig\TwigFunction('asset', function ($route) {
     $dir = dirname($_SERVER['SCRIPT_NAME']);

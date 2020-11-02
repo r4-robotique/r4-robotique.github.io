@@ -1,10 +1,10 @@
 $(document).ready(function () {
     var map = L.map('r4-map').setView([44.822486, 0.001405], 5);
 
-    //   var OpenStreetMap_France = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-    //     maxZoom: 20,
-    //     attribution: '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    //   });
+       var OpenStreetMap_France = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+         maxZoom: 20,
+         attribution: '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+       });
 
     var Stadia_OSMBright = L.tileLayer('https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png', {
         maxZoom: 20,
@@ -12,7 +12,8 @@ $(document).ready(function () {
     });
 
 
-    Stadia_OSMBright.addTo(map);
+    // Stadia_OSMBright.addTo(map);
+    OpenStreetMap_France.addTo(map);
 
     var markersCluster = new L.MarkerClusterGroup();
     for (let entity of entities) {

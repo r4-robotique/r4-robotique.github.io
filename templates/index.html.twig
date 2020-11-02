@@ -2,15 +2,24 @@
 
 {% block body %}
 
-<div class="jumbotron mb-2">
-  <h1 class="display-8">
-    Robotics research in Nouvelle-Aquitaine, France
-  </h1>
-  <p class="lead">
-    R4 is a regional robotics network involving 11 research entities in the region of Nouvelle-Aquitaine,
-    France. The objective of the network is to boost research activities, mainly through a weekly
-    <a href="{{ path('/working-group') }}">working group</a>.
-  </p>
+<div class="jumbotron mb-2 bg-na">
+  <div class="d-flex">
+    <div class="mr-3">
+        <a href="https://www.nouvelle-aquitaine.fr/" target="_blank">
+            <img src="{{ asset('img/nouvelle-aquitaine.png') }}" />
+        </a>
+    </div>
+    <div>
+        <h1 class="display-8">
+            Robotics research in Nouvelle-Aquitaine, France
+        </h1>
+        <p class="lead">
+            R4 is a regional robotics network involving 11 research entities in the region of Nouvelle-Aquitaine,
+            France. The objective of the network is to boost research activities, mainly through a weekly
+            <a href="{{ path('/working-group') }}">working group</a>.
+        </p>
+    </div>
+  </div>
 </div>
 
 <div id="r4-map"></div>

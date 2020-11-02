@@ -3,21 +3,32 @@
 return [
     'entities' => [
         [
-            'name' => 'University of Bordeaux / Bordeaux INP / CNRS',
-            'position' => [44.808639, -0.593341],
-            'logo' => 'ub.svg',
+            'name' => 'IMS - University of Bordeaux / Bordeaux INP / CNRS',
+            'position' => [44.808435, -0.595232],
+            'logo' => 'ims.png',
             'entries' => [
                 [
-                    'name' => 'CRONE (IMS)',
-                    'url' => 'https://www.ims-bordeaux.fr/fr/',
-                    'position' => [44.807798, -0.596882],
-                    'logo' => 'ims.png'
+                    'name' => 'CRONE',
+                    'url' => 'https://www.ims-bordeaux.fr/fr/recherche/groupes-recherche/45-automatique/crone/28-CRONE',
+                    'logo' => 'crone.png'
+                ]
+            ]
+        ],
+
+        [
+            'name' => 'LaBRI - University of Bordeaux / Bordeaux INP / CNRS',
+            'position' => [44.808280, -0.596787],
+            'logo' => 'labri.png',
+            'entries' => [
+                [
+                    'name' => 'RHOBAN',
+                    'url' => 'https://www.rhoban-project.fr/',
+                    'logo' => 'rhoban.png',
                 ],
                 [
-                    'name' => 'RHOBAN & PROGRESS (LaBRI)',
-                    'url' => 'https://www.labri.fr/',
-                    'logo' => 'labri.png',
-                    'position' => [44.808280, -0.596787]
+                    'name' => 'PROGRESS',
+                    'url' => 'https://www.labri.fr/index.php?n=Progress.Progress',
+                    'logo' => 'progress.png',
                 ],
             ]
         ],
@@ -71,26 +82,26 @@ return [
 
 
         [
-            'name' => 'University of Limoges',
+            'name' => 'XLIM - University of Limoges',
             'position' => [45.825930, 1.258533],
             'entries' => [
                 [
-                    'name' => 'XLIM',
+                    'name' => 'REMIX',
                     'position' => [45.837897, 1.238693],
-                    'logo' => 'xlim.png',
-                    'url' => 'https://www.xlim.fr/'
+                    'logo' => 'remix.png',
+                    'url' => 'https://www.xlim.fr/recherche/pole-electronique/systemes-reseaux-intelligents/remix'
                 ]
             ]
         ],
 
         [
-            'name' => 'University of Poitiers',
+            'name' => 'Institut PPRIME - University of Poitiers',
             'position' => [46.585543, 0.345803],
             'entries' => [
                 [
-                    'name' => 'Institut PPRIME',
+                    'name' => 'ROBIOSS',
                     'position' => [46.658953, 0.357533],
-                    'logo' => 'pprime.png',
+                    'logo' => 'robioss.png',
                     'url' => 'https://pprime.fr/'
                 ]
             ]

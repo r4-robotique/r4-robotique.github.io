@@ -23,4 +23,12 @@ $(document).ready(function () {
         markersCluster.addLayer(m);
     }
     map.addLayer(markersCluster);
+
+    $.getJSON('/js/region.json', function(data) {
+        L.geoJSON(data, {
+            'color': '#f7002e',
+            'fillColor': '#f7002e',
+            'fillOpacity': 0.1
+        }).addTo(map);
+    });
 });

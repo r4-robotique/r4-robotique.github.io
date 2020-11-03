@@ -13,6 +13,7 @@ $routes = [
     '/plateformes' => ['plateformes.html.twig', 'plateformes.php'],
     '/formations' => ['formations.html.twig', 'formations.php'],
     '/presse' => ['presse.html.twig', 'presse.php'],
+    '/ical' => ['', 'ical.php']
 ];
 
 /////////////////////////////////////////////////////////////////////////////

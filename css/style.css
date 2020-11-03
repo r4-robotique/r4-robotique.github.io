@@ -33,7 +33,8 @@ footer a {
 
 footer img {
     opacity:0.5;
-    width:120px;
+    width:100px;
+    margin:10px;
 }
 
 footer img:hover {

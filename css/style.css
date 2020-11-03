@@ -33,11 +33,13 @@ footer a {
 
 footer img {
     opacity:0.5;
+    filter: grayscale(100%);
     width:100px;
     margin:10px;
 }
 
 footer img:hover {
+    filter: grayscale(0%);
     opacity:1;
 }
 

@@ -25,8 +25,12 @@
 		</div>
 	</center>
 
+    <a href="#" class="show-passed">
+        Display passed events
+    </a>
+
 	{% for event in events %}
-		<div class="card m-2
+		<div class="card m-2 {% if event.passed %}passed{% endif %}
                         {% if 'now'|date('U') > event.date_end|date('U') %}
                         inactive
                         {% endif %}">
@@ -65,7 +69,7 @@
 						<div class="date">
 							<div class="date-img mr-2"><img src="{{ asset('img/calendar.png') }}"></div>
 							<div class="date-text">
-                                {{ event.date_start|date('d M Y') }}<br/>
+                                {{ event.date_start|date('d M Y') }} -
                                 {{ event.date_start|date('H:i') }}h&rarr;{{ event.date_end|date('H:i') }}h
 							</div>
 						</div>
@@ -79,4 +83,8 @@
 		</div>
 	{% endfor %}
 
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset('js/events.js') }}"></script>
 {% endblock %}

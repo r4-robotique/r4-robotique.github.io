@@ -13,7 +13,7 @@ return [
     'title' => 'Presentation of ROBIOSS team (PPRIME)',
     'speakers' => 'Jean-Pierre Gazeau',
     'date_start' => '13:30',
-    'date_end' => '14:30',
+    'date_end' => '14:00',
     'where' => 'Remote',
     'visio' => 'https://webconf.u-bordeaux.fr/b/gre-2dg-d6u'
   ]

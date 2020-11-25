@@ -62,7 +62,7 @@ foreach ($events as $event) {
   echo "DTSTAMP:" . icalDate(time()) . "\r\n";
   echo "DTSTART:" . icalDate($ts_start) . "\r\n";
   echo "DTEND:" . icalDate($ts_end) . "\r\n";
-  echo "SUMMARY:GT R4\r\n";
+  echo "SUMMARY:R4\r\n";
   $desc = "DESCRIPTION:" . icalDescription($event);
   if (isset($event['visio'])) {
     $desc .= "\\nVisio: " . $event['visio'];

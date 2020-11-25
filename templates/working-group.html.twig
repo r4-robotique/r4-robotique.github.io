@@ -76,7 +76,11 @@
 					</div>
 					<div class="col-sm-4 text-right">
 						{{ event.where }}
+            {% if event.where == 'Remote' %}
+            <img class="ml-2" src="{{ asset('img/webcam.png') }}">
+            {% else %}
 						<img class="ml-2" src="{{ asset('img/house.png') }}">
+            {% endif %}
 					</div>
 				</div>
 			</div>

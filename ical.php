@@ -1,56 +1,76 @@
 <?php
 
-$data = include(__DIR__.'/data/events.php');
+$data = include(__DIR__ . '/data/events.php');
 $events = $data['events'];
 header('Content-type: text/calendar');
 
 function icalDate($time, $inclTime = true)
 {
-    $dateTime = new \DateTime;
-    $dateTime->setTimestamp($time);
-    $tz = new \DateTimeZone('Europe/Paris');
-    $time -= $tz->getOffset($dateTime);
-    return date('Ymd' . ($inclTime ? '\THis' : ''), $time).'Z';
+  $dateTime = new \DateTime;
+  $dateTime->setTimestamp($time);
+  $tz = new \DateTimeZone('Europe/Paris');
+  $time -= $tz->getOffset($dateTime);
+  return date('Ymd' . ($inclTime ? '\THis' : ''), $time) . 'Z';
 }
 
 function icalString($string)
 {
-    $lines = explode("\n", strip_tags($string));
-    foreach ($lines as &$line) {
-        $line = trim($line);
-    }
+  $lines = explode("\n", strip_tags($string));
+  foreach ($lines as &$line) {
+    $line = trim($line);
+  }
 
-    return implode(" ", $lines);
+  return implode(" ", $lines);
 }
 
 function icalDescription($event)
 {
-    $str = icalString($event['title'])."\\n".icalString($event['speakers']);
+  $str = icalString($event['title']) . "\\n" . icalString($event['speakers']);
 
-    return $str;
+  return $str;
 }
 
 function icalUid($event)
 {
-    return md5(implode('/', $event));
+  return md5(implode('/', $event));
 }
 
-?>
-BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//hacksw/handcal//NONSGML v1.0//EN
-<?php foreach ($events as $event) { 
-$ts_start = strtotime($event['date_start']); 
-$ts_end = strtotime($event['date_end']); 
-?>
-BEGIN:VEVENT
-DTSTAMP:<?php echo icalDate(time())."\n"; ?>
-DTSTART:<?php echo icalDate($ts_start)."\n"; ?>
-DTEND:<?php echo icalDate($ts_end)."\n"; ?>
-SUMMARY:GT ASPIC
-DESCRIPTION:<?php echo icalDescription($event); ?><?php if (isset($event['visio'])) echo "\\nVisio: ".$event['visio']; ?><?php echo "\n"; ?>
-LOCATION:<?php echo icalString($event['where'])."\n"; ?>
-UID:<?php echo icalUid($event)."\n"; ?>
-END:VEVENT
-<?php } ?>
-END:VCALENDAR
+function fold($str)
+{
+  $result = '';
+  while (true) {
+    if (strlen($str) > 75) {
+      $result .= substr($str, 0, 75);
+      $result .= "\r\n";
+      $str = ' '.substr($str, 75);
+    } else {
+      $result .= $str;
+      break;
+    }
+  }
+  return $result;
+}
+
+echo "BEGIN:VCALENDAR\r\n";
+echo "VERSION:2.0\r\n";
+echo "PRODID:-//hacksw/handcal//NONSGML v1.0//EN\r\n";
+foreach ($events as $event) {
+  $ts_start = strtotime($event['date_start']);
+  $ts_end = strtotime($event['date_end']);
+
+  echo "BEGIN:VEVENT\r\n";
+  echo "DTSTAMP:" . icalDate(time()) . "\r\n";
+  echo "DTSTART:" . icalDate($ts_start) . "\r\n";
+  echo "DTEND:" . icalDate($ts_end) . "\r\n";
+  echo "SUMMARY:GT R4\r\n";
+  $desc = "DESCRIPTION:" . icalDescription($event);
+  if (isset($event['visio'])) {
+    $desc .= "\\nVisio: " . $event['visio'];
+  }
+  echo fold($desc);
+  echo "\r\n";
+  echo "LOCATION:" . icalString($event['where']) . "\r\n";
+  echo "UID:" . icalUid($event) . "\r\n";
+  echo "END:VEVENT\r\n";
+}
+echo "END:VCALENDAR\r\n";

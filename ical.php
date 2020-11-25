@@ -1,6 +1,7 @@
 <?php
 
-$events = @include('data/events.php')['events'];
+$data = include(__DIR__.'/data/events.php');
+$events = $data['events'];
 header('Content-type: text/calendar');
 
 function icalDate($time, $inclTime = true)

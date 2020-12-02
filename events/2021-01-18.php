@@ -10,8 +10,8 @@ return [
     'visio' => 'https://webconf.u-bordeaux.fr/b/gre-2dg-d6u'
   ],
   [
-    'title' => 'Presentation of RHOBAN team (LaBRI)',
-    'speakers' => 'Olivier Ly & Grégoire Passault',
+    'title' => 'Presentation of ESTIA-Recherche',
+    'speakers' => 'Nadine Couture & Vincent Magimel',
     'date_start' => '13:30',
     'date_end' => '14:00',
     'where' => 'Remote',

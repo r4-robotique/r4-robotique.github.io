@@ -10,7 +10,7 @@ return [
     'visio' => 'https://webconf.u-bordeaux.fr/b/gre-2dg-d6u'
   ],
   [
-    'title' => 'Presentation of ENSAM/L2M',
+    'title' => 'Presentation of ENSAM/I2M',
     'speakers' => 'Mehdi Cheriff',
     'date_start' => '13:30',
     'date_end' => '14:00',

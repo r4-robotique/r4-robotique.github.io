@@ -35,7 +35,11 @@
             <span class="card-title">{{ entry['name'] }}</span>
             <br/>
             <small class="text-muted">
+            {% if entry['structure'] is defined %}
+            {{ entry['structure'] }}
+            {% else %}
             {{ entity['name'] }}
+            {% endif %}
             </small>
         </div>
         <div class="card-body">

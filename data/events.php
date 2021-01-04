@@ -15,6 +15,15 @@ foreach ($files as $file) {
       $event['date_end'] = $date.' '.$event['date_end'];
       $ts = strtotime($event['date_end']);
       $event['passed'] = $ts < time();
+
+      if (isset($event['files'])) {
+        foreach ($event['files'] as &$event_file) {
+          if (substr($event_file, 0, 5) != 'http:' && substr($event_file, 0, 6) != 'https:') {
+              $event_file = 'files/'.$event_file;
+          }
+        }
+      }
+
       $events[] = $event;
     }
   }

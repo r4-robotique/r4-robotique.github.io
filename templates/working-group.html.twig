@@ -51,12 +51,11 @@
 					</em>
 				{% endif %}
 
-				{% if event.docs %}
-					<br/>
+				{% if event.files %}
+					<hr/>
 					<em>
-						{% for file, doc in event.docs %}
-							<img src="{{ asset('img/download.png') }}"/>
-							<a target="_blank" href="{{ asset('files/'~file) }}">{{ doc }}</a>
+						{% for name, file in event.files %}
+							<a target="_blank" href="{{ file }}">{{ name }}</a>
 							<br/>
 						{% endfor %}
 					</em>

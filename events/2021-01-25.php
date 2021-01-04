@@ -2,8 +2,8 @@
 
 return [
   [
-    'title' => "Presentation of LIUPPA (University of Pau)",
-    'speakers' => 'Laurent Gallon',
+    'title' => "Presentation of RHOBAN (University of Bordeaux)",
+    'speakers' => 'Olivier Ly and Grégoire Passault',
     'date_start' => '13:00',
     'date_end' => '13:30',
     'where' => 'Remote',

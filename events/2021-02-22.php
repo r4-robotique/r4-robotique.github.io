@@ -2,8 +2,8 @@
 
 return [
   [
-    'title' => "Fast training of Recurrent Neural Networks: Reservoir Computing",
-    'speakers' => 'Xavier Hinaut (Mnemosyne, INRIA)',
+    'title' => "Introduction to quadratic programming for control in robotics",
+    'speakers' => 'Vincent Padois (Auctus, INRIA)',
     'date_start' => '13:00',
     'date_end' => '14:00',
     'where' => 'Remote',

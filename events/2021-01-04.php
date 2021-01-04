@@ -11,7 +11,7 @@ return [
   ],
   [
     'title' => 'Presentation of ENSAM/I2M',
-    'speakers' => 'Mehdi Cheriff',
+    'speakers' => 'Mehdi Cherif',
     'date_start' => '13:30',
     'date_end' => '14:00',
     'where' => 'Remote',

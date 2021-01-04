@@ -1,0 +1,12 @@
+<?php
+return
+[
+    [
+    'title' => 'Presentation of ESTIA-Recherche',
+    'speakers' => 'Nadine Couture & Vincent Magimel',
+    'date_start' => '13:30',
+    'date_end' => '14:00',
+    'where' => 'Remote',
+    'visio' => 'https://u-bordeaux-fr.zoom.us/j/83483228567'
+  ]
+    ];

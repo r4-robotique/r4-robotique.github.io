@@ -1,9 +1,10 @@
 <?php
+
 return
     [
         [
-            'title' => "Presentation of REMIX team (XLIM)",
-            'speakers' => 'Ouiddad Labbani',
+            'title' => 'Presentation of FLOWERS team',
+            'speakers' => 'Pierre-Yves Oudeyer',
             'date_start' => '13:00',
             'date_end' => '14:00',
             'where' => 'Remote',

@@ -13,7 +13,8 @@ $routes = [
     '/plateformes' => ['plateformes.html.twig', 'plateformes.php'],
     '/formations' => ['formations.html.twig', 'formations.php'],
     '/presse' => ['presse.html.twig', 'presse.php'],
-    '/ical' => ['', 'ical.php']
+    '/ical' => ['', 'ical.php'],
+    '/next' => ['', 'next.php'],
 ];
 
 /////////////////////////////////////////////////////////////////////////////
@@ -43,4 +44,6 @@ if (isset($routes[$route][1])) {
 }
 $data['route'] = $route;
 
-echo $twig->render($routes[$route][0], $data);
+if ($routes[$route][0]) {
+    echo $twig->render($routes[$route][0], $data);
+}

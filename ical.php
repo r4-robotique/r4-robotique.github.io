@@ -2,6 +2,9 @@
 
 $data = include(__DIR__ . '/data/events.php');
 $events = $data['events'];
+if (!isset($just_first)) {
+    $just_first = false;
+}
 header('Content-type: text/calendar');
 
 function icalDate($time, $inclTime = true)
@@ -55,6 +58,7 @@ echo "BEGIN:VCALENDAR\r\n";
 echo "VERSION:2.0\r\n";
 echo "PRODID:-//hacksw/handcal//NONSGML v1.0//EN\r\n";
 foreach ($events as $event) {
+  if ($just_first && $event['passed']) continue;
   $ts_start = strtotime($event['date_start']);
   $ts_end = strtotime($event['date_end']);
 
@@ -72,5 +76,6 @@ foreach ($events as $event) {
   echo "LOCATION:" . icalString($event['where']) . "\r\n";
   echo "UID:" . icalUid($event) . "\r\n";
   echo "END:VEVENT\r\n";
+  if ($just_first && !$event['passed']) break;
 }
 echo "END:VCALENDAR\r\n";

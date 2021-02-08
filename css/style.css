@@ -90,6 +90,7 @@ footer img:hover {
     align-items: flex-end;
     flex-direction: column;
     background-position:center;
+    background-repeat:no-repeat;
     /* text-shadow:0px 0px 3px white; */
 }
 

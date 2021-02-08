@@ -4,6 +4,7 @@ include 'vendor/autoload.php';
 
 $routes = [
     '/' => ['index.html.twig', 'entities.php'],
+    '/cover' => ['cover.html.twig', 'entities.php'],
     '/working-group' => ['working-group.html.twig', 'events.php'],
 
     '/formations' => ['formations.html.twig'],

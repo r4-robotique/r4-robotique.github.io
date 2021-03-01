@@ -30,57 +30,63 @@
     </a>
 
 	{% for event in events %}
-		<div class="card m-2 {% if event.passed %}passed{% endif %}
+		<div class="card flex-row flex-wrap m-2 {% if event.passed %}passed{% endif %}
                         {% if 'now'|date('U') > event.date_end|date('U') %}
                         inactive
                         {% endif %}">
-			<div class="card-body">
-				<h5 class="card-title">
-					{{ event.title|raw }}
-				</h5>
-				{% if event.speakers %}
-					<em>
-						{{ event.speakers }}
-					</em>
-				{% endif %}
-				{% if event['visio'] is defined %}
-					{% if event.speakers %}<br/>
-					{% endif %}
-					<em>
-						<a href="{{ event.visio }}">Accéder à la visio</a>
-					</em>
-				{% endif %}
 
-				{% if event.files %}
-					<hr/>
-					<em>
-						{% for name, file in event.files %}
-							<a target="_blank" href="{{ file }}">{{ name }}</a>
-							<br/>
-						{% endfor %}
-					</em>
-				{% endif %}
-			</div>
-			<div class="card-footer">
-				<div class="row">
-					<div class="col-sm-8">
-						<div class="date">
-							<div class="date-img mr-2"><img src="{{ asset('img/calendar.png') }}"></div>
-							<div class="date-text">
-                                {{ event.date_start|date('d M Y') }} -
-                                {{ event.date_start|date('H:i') }}h&rarr;{{ event.date_end|date('H:i') }}h
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-4 text-right">
-						{{ event.where }}
-            {% if event.where == 'Remote' %}
-            <img class="ml-2" src="{{ asset('img/webcam.png') }}">
-            {% else %}
-						<img class="ml-2" src="{{ asset('img/house.png') }}">
-            {% endif %}
-					</div>
-				</div>
+                    <div class="card-header border-0 col-sm-4 col-lg-2">
+                        <div>
+                            <div class="date">
+                                <div class="date-img mr-1"><img src="{{ asset('img/calendar.png') }}"></div>
+                                <div class="date-text">
+                                    <b>
+                                    {{ event.date_start|date('d M Y')|replace({' ': '&nbsp;'})|raw }} 
+                                    <br/>
+                                    <small>
+                                        {{ event.date_start|date('H:i') }}h&rarr;{{ event.date_end|date('H:i') }}h
+                                    </small>
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            {{ event.where }}
+                            {% if event.where == 'Remote' %}
+                            <img class="ml-2" src="{{ asset('img/webcam.png') }}">
+                            {% else %}
+                                        <img class="ml-2" src="{{ asset('img/house.png') }}">
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="card-body col-sm-8 col-lg-10">
+                        <h5 class="card-title">
+                            {{ event.title|raw }}
+                        </h5>
+                        {% if event.speakers %}
+                            <em>
+                                {{ event.speakers }}
+                            </em>
+                        {% endif %}
+                        {% if event['visio'] is defined %}
+                            {% if event.speakers %}<br/>
+                            {% endif %}
+                            <em>
+                                <a href="{{ event.visio }}">Accéder à la visio</a>
+                            </em>
+                        {% endif %}
+
+                        {% if event.files %}
+                            <hr/>
+                            <em>
+                                {% for name, file in event.files %}
+                                    <a target="_blank" href="{{ file }}">{{ name }}</a>
+                                    <br/>
+                                {% endfor %}
+                            </em>
+                        {% endif %}
+
 			</div>
 		</div>
 	{% endfor %}

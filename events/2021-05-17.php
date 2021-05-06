@@ -2,7 +2,7 @@
 
 return [
   [
-    'title' => "Projet DEMAIN et robotique : quel impact sur le démantèlement nucléair",
+    'title' => "Projet DEMAIN et robotique : quel impact sur le démantèlement nucléaire ?",
     'speakers' => 'Ludovic Mathieu',
     'date_start' => '13:00',
     'date_end' => '14:00',

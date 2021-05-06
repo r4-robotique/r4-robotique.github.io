@@ -25,15 +25,38 @@
 		</div>
 	</center>
 
-    <a href="#" class="show-passed">
-        Display previous (passed) event
-    </a>
+    <div class="top-navigation mt-2"></div>
+
+    {% set page = 0 %}
+    {% set current_page = 0 %}
+    {% set items = 0 %}
+    {% set new_page = true %}
+    {% set only_passed = true %}
 
 	{% for event in events %}
-		<div class="card flex-row flex-wrap m-2 {% if event.passed %}passed{% endif %}
-                        {% if 'now'|date('U') > event.date_end|date('U') %}
-                        inactive
-                        {% endif %}">
+        
+        {% set items = items + 1 %}
+        {% if items >= 3 %}
+        {% set new_page = true %}
+        {% endif %}
+
+        {% if only_passed == true and not event.passed %}
+        {% set new_page = true %}
+        {% set only_passed = false %}
+        {% set current_page = page + 1 %}
+        {% endif %}
+
+        {% if new_page %}
+        {% set new_page = false %}
+        {% set items = 0 %}
+        {% set page = page + 1 %}
+        {% if page > 1 %}
+        </div>
+        {% endif %}
+        <div class="events-page events-page-{{ page }} {% if current_page == page %}current-page{% endif %}">
+        {% endif %}
+
+		<div class="card flex-row flex-wrap m-2 {% if event.passed %}passed{% endif %}">
 
                     <div class="card-header border-0 col-sm-4 col-lg-2">
                         <div>
@@ -89,7 +112,28 @@
 
 			</div>
 		</div>
+
 	{% endfor %}
+
+    </div>
+
+    <script type="text/javascript">
+    var events_page = {{ current_page }};
+    var events_pages = {{ page }};
+    </script>
+    <div class="bottom-navigation">
+    <div class="d-flex justify-content-center events-pagination">
+    <nav aria-label="Pages">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link previous-page" href="#">&laquo;</a></li>
+        {% for p in 1..page %}
+        <li rel="{{ p }}" class="page-item change-page {% if p == current_page %}active{% endif %}"><a class="page-link" href="#">{{ p }}</a></li>
+        {% endfor %}
+        <li class="page-item"><a class="page-link next-page" href="#">&raquo;</a></li>
+    </ul>
+    </nav>
+    </div>
+    </div>
 
 {% endblock %}
 

@@ -127,3 +127,11 @@ footer img:hover {
     margin-left:15px;
     margin-right:15px;
 }
+
+.events-page {
+    display:none;
+}
+
+.events-page.current-page {
+    display:inline;
+}

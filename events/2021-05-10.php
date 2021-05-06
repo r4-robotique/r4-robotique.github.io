@@ -2,7 +2,7 @@
 
 return [
   [
-    'title' => "Introduction to quadratic programming for control in robotics",
+    'title' => "Some considerations on optimization-based control in Robotics",
     'speakers' => 'Vincent Padois (Auctus, INRIA)',
     'date_start' => '13:00',
     'date_end' => '14:00',

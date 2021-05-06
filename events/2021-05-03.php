@@ -2,7 +2,7 @@
 return
     [
         [
-            'title' => "Task-Space Inverse Dynamics: a C++ Library for Efficient Whole-Body Control”",
+            'title' => "Task-Space Inverse Dynamics: a C++ Library for Efficient Whole-Body Control",
             'speakers' => 'Andrea Del Prete',
             'date_start' => '13:00',
             'date_end' => '14:00',

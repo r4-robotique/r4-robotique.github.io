@@ -2,7 +2,7 @@
 
 return [
   [
-    'title' => "Some considerations on optimization-based control in Robotics",
+    'title' => "Some considerations on optimization-based control in Robotics (1/2)",
     'speakers' => 'Vincent Padois (Auctus, INRIA)',
     'date_start' => '13:00',
     'date_end' => '14:00',

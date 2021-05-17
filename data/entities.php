@@ -134,5 +134,18 @@ return [
             ]
         ],
 
+        [
+            'name' => 'ONERA',
+            'position' => [43.571146, 1.472346],
+            'entries' => [
+                [
+                    'name' => 'ONERA',
+                    'logo' => 'onera.png',
+                    'url' => 'https://www.onera.fr/fr/site-index/bordeaux.html'
+
+                ]
+            ]
+        ]
+
     ]
 ];

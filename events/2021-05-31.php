@@ -9,7 +9,8 @@ return [
         'where' => 'Remote',
         'visio' => 'https://u-bordeaux-fr.zoom.us/j/83483228567',
         'files' => [
-            'Video' => 'https://www.youtube.com/watch?v=M4VsicRBf_0'
+            'Video' => 'https://www.youtube.com/watch?v=M4VsicRBf_0',
+            'Slides' => 'r4_catie_robotique.pdf'
         ]
     ]
 ];

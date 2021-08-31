@@ -2,7 +2,7 @@
 
 return [
   [
-    'title' => "Partager l'activité entre Humains et robots, une approche orientée tâche pour la téléopération haptique",
+    'title' => "Human-Robot shared work, challenges in haptic design and control",
     'speakers' => 'Margot Vulliez',
     'date_start' => '13:00',
     'date_end' => '14:00',

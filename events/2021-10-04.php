@@ -3,7 +3,7 @@
 return [
     [
         'title' => "Planning and Behavior Recognition in Dynamic Multi-agent Systems.",
-        'speakers' => 'Manuela',
+        'speakers' => 'Manuela Veloso',
         'date_start' => '14:00',
         'date_end' => '14:40',
         'where' => 'Amphi LaBRI'

@@ -87,6 +87,14 @@
                         <h5 class="card-title">
                             {{ event.title|raw }}
                         </h5>
+                        {% if event.abstract %}
+                        <em>
+                        <small>
+                        {{ event.abstract }}
+                        </small>
+                        </em>
+                        <br/><br/>
+                        {% endif %}
                         {% if event.speakers %}
                             <em>
                                 {{ event.speakers }}

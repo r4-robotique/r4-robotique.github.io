@@ -20,7 +20,7 @@ return [
       [
         'title' => "Game Strategies for Physical Robot Soccer Players",
         'speakers' => 'Daniele Nardi',
-        'date_start' => '15:00',
+        'date_start' => '15:20',
         'date_end' => '16:00',
         'where' => 'Amphi LaBRI',
         'visio' => 'https://u-bordeaux-fr.zoom.us/j/83483228567',

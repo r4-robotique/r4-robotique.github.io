@@ -16,6 +16,9 @@ return [
         'date_end' => '15:20',
         'where' => 'Amphi LaBRI',
         'visio' => 'https://u-bordeaux-fr.zoom.us/j/83483228567',
+        'files' => [
+            'video' => 'https://www.youtube.com/watch?v=MT-naYH6-OI'
+        ]
       ],
       [
         'title' => "Game Strategies for Physical Robot Soccer Players",

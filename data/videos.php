@@ -14,18 +14,13 @@ return [
         ],
         [
             'team' => 'REMIX/XLIM institute',
-            'title' => 'UAV-related research topics',
-            'v' => ''
-        ],
-        [
-            'team' => 'REMIX/XLIM institute',
-            'title' => 'Ground robotics-related research topics',
-            'v' => ''
+            'title' => 'Ground and aerial robotics-related research topics',
+            'v' => '63g7H4MCTqY'
         ],
         [
             'team' => 'REMIX/XLIM institute',
             'title' => 'Human-Cobot Interaction',
-            'v' => ''
+            'v' => 'R9yQIoz5tQo'
         ],
         [
             'team' => 'LIUPPA/UPPA',

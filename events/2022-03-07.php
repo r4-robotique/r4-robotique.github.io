@@ -2,8 +2,8 @@
 
 return [
   [
-    'title' => "Automatic Curriculum Learning for Developmental Machine Learners",
-    'speakers' => 'Rémy Portelas',
+    'title' => "Robotique et prévention des risques professionnels - adapter le travail à l'homme",
+    'speakers' => 'Jonathan Savin',
     'date_start' => '13:00',
     'date_end' => '14:00',
     'where' => 'Remote',

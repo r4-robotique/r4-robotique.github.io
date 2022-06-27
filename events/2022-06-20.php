@@ -10,7 +10,8 @@ return [
         'visio' => 'https://u-bordeaux-fr.zoom.us/j/83483228567',
         'files' => [
             'GitHub repositories' => 'https://github.com/tasts-robots',
-            'Video' => 'https://www.youtube.com/watch?v=BlLX2JABLK0'
+            'Video' => 'https://www.youtube.com/watch?v=BlLX2JABLK0',
+            'References & discussion' => 'https://scaron.info/talks/r4-2022.html'
         ]
     ],
 ];

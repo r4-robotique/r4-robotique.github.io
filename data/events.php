@@ -1,34 +1,73 @@
 <?php
 
-// https://webconf.u-bordeaux.fr/b/gre-2dg-d6u
+$prefix = __DIR__ . '/../events/';
 
-$dir = __DIR__.'/../events/';
-$files = scandir($dir);
-$events = [];
-foreach ($files as $file) {
-  $parts = explode('.', $file);
-  if ($parts[count($parts)-1] == 'php') {
-    $date = $parts[0];
-    $sessionEvents = include($dir.$file);
-    foreach ($sessionEvents as $event) {
-      $event['date_start'] = $date.' '.$event['date_start'];
-      $event['date_end'] = $date.' '.$event['date_end'];
-      $ts = strtotime($event['date_end']);
-      $event['passed'] = $ts < time();
-
-      if (isset($event['files'])) {
-        foreach ($event['files'] as &$event_file) {
-          if (substr($event_file, 0, 5) != 'http:' && substr($event_file, 0, 6) != 'https:') {
-              $event_file = 'files/'.$event_file;
-          }
-        }
-      }
-
-      $events[] = $event;
+$available_dirs = scandir($prefix);
+$available_years = [];
+foreach ($available_dirs as $dir) {
+    if ($dir[0] != ".") {
+        $available_years[] = $dir;
     }
-  }
 }
 
-$data = ['events' => $events];
+function getEvents($directory)
+{
+    $files = scandir($directory);
+    $events = [];
+
+    foreach ($files as $file) {
+        $parts = explode('.', $file);
+        if ($parts[count($parts) - 1] == 'php') {
+            $date = $parts[0];
+            $sessionEvents = include($directory . $file);
+            foreach ($sessionEvents as $event) {
+                $event['date_start'] = $date . ' ' . $event['date_start'];
+                $event['date_end'] = $date . ' ' . $event['date_end'];
+                $ts = strtotime($event['date_end']);
+                $event['passed'] = $ts < time();
+
+                if (isset($event['files'])) {
+                    foreach ($event['files'] as &$event_file) {
+                        if (substr($event_file, 0, 5) != 'http:' && substr($event_file, 0, 6) != 'https:') {
+                            $event_file = 'files/' . $event_file;
+                        }
+                    }
+                }
+
+                $events[] = $event;
+            }
+        }
+    }
+
+    return $events;
+}
+
+function currentYear()
+{
+    global $available_dirs;
+    return $available_dirs[count($available_dirs) - 1];
+}
+
+function checkYear($year)
+{
+    global $available_years;
+    if (in_array($year, $available_years)) {
+        return $year;
+    } else {
+        return currentYear();
+    }
+}
+
+$results_per_page = 5;
+$year = $_GET["y"] ?? currentYear();
+$year = checkYear($year);
+
+$events = getEvents("$prefix/$year/");
+$pages = ceil(count($events) / $results_per_page);
+
+$page = intval($_GET["p"] ?? $pages);
+
+
+$data = ['events' => array_slice($events, $results_per_page * ($page - 1), $results_per_page), "year" => $year, "page" => $page, "pages" => $pages, "years" => $available_years];
 
 return $data;

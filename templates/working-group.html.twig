@@ -25,39 +25,27 @@
 		</div>
 	</center>
 
-    <div class="top-navigation mt-2"></div>
+    
+    <div class="d-flex justify-content-center">
+    <ul class="pagination">
+    {% for y in years %}
+    <li class="page-item {% if year == y%}active{% endif %} ">
+        <a class="page-link" href="?y={{ y }}">{{ year }}</a>
+    </li>
+    {% endfor %}
+    </ul>
+    </div>
 
-    {% set page = 0 %}
-    {% set current_page = 0 %}
-    {% set items = 0 %}
-    {% set new_page = true %}
-    {% set only_passed = true %}
+
+    {% if events|length == 0 %}
+    <div class="alert alert-warning">
+    Il n'y a aucun événement
+    </div>
+    {% else %}
+    {% include '_navigation.html.twig' %}
 
 	{% for event in events %}
-        
-        {% set items = items + 1 %}
-        {% if items >= 5 %}
-        {% set new_page = true %}
-        {% endif %}
-
-        {% if only_passed == true and not event.passed %}
-        {% set new_page = true %}
-        {% set only_passed = false %}
-        {% set current_page = page + 1 %}
-        {% endif %}
-
-        {% if new_page %}
-        {% set new_page = false %}
-        {% set items = 0 %}
-        {% set page = page + 1 %}
-        {% if page > 1 %}
-        </div>
-        {% endif %}
-        <div class="events-page events-page-{{ page }} {% if current_page == page %}current-page{% endif %}">
-        {% endif %}
-
 		<div class="card flex-row flex-wrap m-2 {% if event.passed %}passed{% endif %}">
-
                     <div class="card-header border-0 col-sm-4 col-lg-2">
                         <div>
                             <div class="date">
@@ -80,6 +68,7 @@
                             {% else %}
                                         <img class="ml-2" src="{{ asset('img/house.png') }}">
                             {% endif %}
+                            {% if event.passed %}<span class="badge badge-danger">archive</span>{% endif %}
                         </div>
                     </div>
 
@@ -118,30 +107,17 @@
                             </em>
                         {% endif %}
 
+                        {% if event.youtube %}
+                        {% include '_youtube.html.twig' with {v: event.youtube} %}
+                        {% endif %}
 			</div>
 		</div>
 
 	{% endfor %}
 
-    </div>
+    {% include '_navigation.html.twig' %}
 
-    <script type="text/javascript">
-    var events_page = {{ current_page }};
-    var events_pages = {{ page }};
-    </script>
-    <div class="bottom-navigation">
-    <div class="d-flex justify-content-center events-pagination">
-    <nav aria-label="Pages">
-    <ul class="pagination">
-        <li class="page-item"><a class="page-link previous-page" href="#">&laquo;</a></li>
-        {% for p in 1..page %}
-        <li rel="{{ p }}" class="page-item change-page {% if p == current_page %}active{% endif %}"><a class="page-link" href="#">{{ p }}</a></li>
-        {% endfor %}
-        <li class="page-item"><a class="page-link next-page" href="#">&raquo;</a></li>
-    </ul>
-    </nav>
-    </div>
-    </div>
+    {% endif %}
 
 {% endblock %}
 

@@ -6,6 +6,7 @@ $routes = [
     '/' => ['index.html.twig', 'entities.php'],
     '/cover' => ['cover.html.twig', 'entities.php'],
     '/working-group' => ['working-group.html.twig', 'events.php'],
+    '/videos' => ['videos.html.twig', 'all-events.php'],
     '/workshop' => ['workshop.html.twig'],
     '/workshop-videos' => ['workshop-videos.html.twig', 'videos.php'],
 

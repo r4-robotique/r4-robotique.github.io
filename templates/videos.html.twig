@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>
+    Working group archive videos
+    </h2>
+
+    {% include '_navigation.html.twig' %}
+
+    <div class="row">
+        {% for event in events %}
+        <div class="col-sm-6 p-2">
+        <div class="card h-100">
+            <div class="card-header">
+            <div class="card-title">
+            <h4>
+                {{ event.title }}
+                <br/>
+                <small>
+                <span class="text-muted">
+                    {% if event.speakers %}
+                    <em>
+                        {{ event.speakers }}
+                    </em>
+                    {% endif %}
+                    <span class="badge badge-warning">{{ event.date_start|date("Y-m-d") }}</span>
+                </span>
+                </small>
+            </h4>
+            </div>
+            </div>
+            
+            <div class="card-body">
+            <div class="card-text">
+
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/{{ event.youtube }}" 
+            title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% include '_navigation.html.twig' %}
+
+{% endblock %}

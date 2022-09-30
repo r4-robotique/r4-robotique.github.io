@@ -1,9 +1,18 @@
 <?php
 
-function paginate(array $data, int $results_per_page = 5, bool $start_end = false): array
+function paginate(array $data, int $results_per_page = 5, bool $start_now = false): array
 {
     $pages = ceil(count($data) / $results_per_page);
-    $page = intval($_GET["p"] ?? ($start_end ? $pages : 1));
+
+    $now_page = $pages;
+    foreach ($data as $k => $entry) {
+        if (!$entry["passed"]) {
+            $now_page = 1 + floor($k / $results_per_page);
+            break;
+        }
+    }
+
+    $page = intval($_GET["p"] ?? ($start_now ? $now_page : 1));
     $data = array_slice($data, $results_per_page * ($page - 1), $results_per_page);
 
     return [$data, $page, $pages];

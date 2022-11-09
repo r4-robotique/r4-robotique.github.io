@@ -3,7 +3,7 @@
 return [
   [
     'title' => "Human Intentional and Unintentional Interpersonal coordination in interaction with a humanoid robot",
-    'speakers' => 'Ghiles Mostafaoui ',
+    'speakers' => 'Ghilès Mostafaoui ',
     'date_start' => '13:00',
     'date_end' => '14:00',
     'where' => 'Remote',

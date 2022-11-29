@@ -9,8 +9,8 @@ return [
     'date_end' => '14:00',
     'where' => 'Remote',
     'visio' => 'https://u-bordeaux-fr.zoom.us/j/83483228567',
+    'youtube' => 'wBkCa-kg3vI',
     'files' => [
-        'Video' => 'https://youtu.be/wBkCa-kg3vI',
         'Robots! Association' => 'https://www.association-robots.com/'
     ]
   ],

@@ -2,12 +2,12 @@
 
 return [
   [
-    'title' => "Numerical Optimization and Motion Generation in Robotics",
-    'speakers' => 'Adrien Escande',
+    'title' => "BIBBIP : imagerie, IA et robotique pour le désherbage de précision.  ",
+    'speakers' => 'Jean-Pierre Da Costa',
     'date_start' => '13:00',
     'date_end' => '14:00',
     'where' => 'Remote',
     'visio' => 'https://u-bordeaux-fr.zoom.us/j/83483228567',
-    'youtube' => 'L8Dwq50qAzc'
+    'youtube' => '-Q49TeGwqjc'
   ],
 ];

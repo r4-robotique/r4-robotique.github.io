@@ -11,6 +11,7 @@ return [
     'visio' => 'https://u-bordeaux-fr.zoom.us/j/83483228567',
     'files' => [
         'Website' => 'https://auctus-team.gitlabpages.inria.fr/publications/2023/preprint_acceleration_mpc/'
-    ]
+    ],
+    'youtube' => '0bNoDM3yf-w'
   ],
 ];

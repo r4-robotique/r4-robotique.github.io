@@ -15,11 +15,16 @@ $calendar = Calendar::create('R4 seminaire');
 foreach ($events as $event) {
     if ($just_first && $event['passed']) continue;
 
+    $desc = $event['title'] . "\n" . $event['speakers'];
+    if (isset($event['visio'])) {
+        $desc .= "\n" . $event['visio'];
+    }
+
     $evt = Event::create('R4')
         ->startsAt(new \DateTime($event['date_start']))
         ->endsAt(new \DateTime($event['date_end']))
         ->address($event['where'])
-        ->description($event['title'] . "\n" . $event['speakers']);
+        ->description($desc);
 
     if (isset($event['visio'])) {
         $evt->url($event['visio']);

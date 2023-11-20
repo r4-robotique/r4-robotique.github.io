@@ -21,8 +21,8 @@ foreach ($events as $event) {
     }
 
     $evt = Event::create('R4')
-        ->startsAt(new \DateTime($event['date_start']))
-        ->endsAt(new \DateTime($event['date_end']))
+        ->startsAt(new \DateTime($event['date_start'], new DateTimeZone('Europe/Paris')))
+        ->endsAt(new \DateTime($event['date_end'], new DateTimeZone('Europe/Paris')))
         ->address($event['where'])
         ->description($desc);
 

@@ -10,6 +10,7 @@ return [
         'visio' => 'https://inria.webex.com/inria/j.php?MTID=m2acd1e4af5406d58422edbe9759180b4',
         'files' => [
             'Page web' => 'https://carolinepascal.github.io/'
-        ]
+	],
+	'youtube' => 'UCCju3B8p_U'
     ],
 ];

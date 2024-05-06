@@ -3,7 +3,7 @@
 return [
 	[
 		'title' => "Language conditioned robot policy learning with interactive learning and reinforcement learning.",
-		'speakers' => 'Zlatan Ajanovic, Jelle Luijkx, Runyu Ma, Jens Kober',
+		'speakers' => 'Jelle Luijkx, Runyu Ma, Zlatan Ajanovic, Jens Kober',
 		'date_start' => '13:00',
 		'date_end' => '14:00',
 		'where' => 'Remote',

@@ -41,7 +41,7 @@ return [
                     'name' => 'AUCTUS',
                     'logo' => 'auctus.png',
                     'url' => 'https://team.inria.fr/auctus/',
-                    'structure' => "Inria-Bordeaux INP au sein de l'IMS UMR 5218 (CNRS - Université de Bordeaux - Bordeaux INP) hébergée par Ensc."
+                    'structure' => "Inria, Centre Inria de l'Université de Bordeaux, hébergé par Bordeaux INP au sein de l'ENSC"
                 ],
                 [
                     'name' => 'FLOWERS',

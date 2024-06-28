@@ -24,6 +24,9 @@ function getEvents($year)
             $date = $parts[0];
             $sessionEvents = include($directory . $file);
             foreach ($sessionEvents as $event) {
+                if (!isset($event['date_start']) || !isset($event['date_end'])) {
+                    $event["date_tbd"] = true;
+                }
                 $event['date_start'] = $date . ' ' . $event['date_start'];
                 $event['date_end'] = $date . ' ' . $event['date_end'];
                 $ts = strtotime($event['date_end']);

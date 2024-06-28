@@ -13,6 +13,7 @@ if (!isset($just_first)) {
 $calendar = Calendar::create('R4 seminaire');
 
 foreach ($events as $event) {
+    if (!isset($event['date_start']) || !isset($event['date_end'])) continue;
     if ($just_first && $event['passed']) continue;
 
     $desc = $event['title'] . "\n" . $event['speakers'];

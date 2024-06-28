@@ -55,7 +55,11 @@
                                     {{ event.date_start|date('d M Y')|replace({' ': '&nbsp;'})|raw }} 
                                     <br/>
                                     <small>
-                                        {{ event.date_start|date('H:i') }}h&rarr;{{ event.date_end|date('H:i') }}h
+                                        {% if event.date_tbd is defined %}
+                                            Time TBD
+                                        {% else %}
+                                            {{ event.date_start|date('H:i') }}h&rarr;{{ event.date_end|date('H:i') }}h
+                                        {% endif %}
                                     </small>
                                     </b>
                                 </div>
@@ -86,7 +90,15 @@
                         {% endif %}
                         {% if event.speakers %}
                             <em>
+                                {% if event.speakers_url is defined %}
+                                <a target="_blank" href="{{ event.speakers_url }}">
+                                {% endif %}
+
                                 {{ event.speakers }}
+
+                                {% if event.speakers_url is defined %}
+                                </a>
+                                {% endif %}
                             </em>
                         {% endif %}
                         {% if event['visio'] is defined %}

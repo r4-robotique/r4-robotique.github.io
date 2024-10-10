@@ -2,8 +2,8 @@
 
 return [
     [
-        'title' => "Low-order algorithms for efficient robot simulation and control",
-        'speakers' => 'Ajay Sathya',
+        'title' => "(Titre à venir)",
+        'speakers' => 'Abderrahmane Kheddar',
         'date_start' => '13:00',
         'date_end' => '14:00',
         'where' => 'Remote',

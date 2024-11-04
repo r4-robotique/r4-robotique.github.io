@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "(Titre à venir)",
+        'title' => "Humanoid robots for what job ?",
         'speakers' => 'Abderrahmane Kheddar',
         'date_start' => '13:00',
         'date_end' => '14:00',

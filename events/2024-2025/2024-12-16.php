@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "(titre à venir)",
+        'title' => "Le développement de robots miniatures souples",
         'speakers' => 'Wissem Haouas',
         'date_start' => '13:00',
         'date_end' => '14:00',

@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "TBD",
+        'title' => "Optimal control of walkers with parallel actuation",
         'speakers' => 'Ludovic De-Matteis',
         'date_start' => '13:00',
         'date_end' => '14:00',

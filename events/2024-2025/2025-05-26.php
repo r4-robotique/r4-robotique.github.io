@@ -2,8 +2,8 @@
 
 return [
     [
-        'title' => "Space Robotics for On-Orbit Services",
-        'speakers' => 'Philippe Caïs',
+        'title' => "TBD",
+        'speakers' => 'Marwen Belkaid',
         'date_start' => '13:00',
         'date_end' => '14:00',
         'where' => 'Remote',

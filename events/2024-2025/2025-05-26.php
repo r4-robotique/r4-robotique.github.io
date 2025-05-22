@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "TBD",
+        'title' => "How robot behavior influences human decision-making",
         'speakers' => 'Marwen Belkaid',
         'date_start' => '13:00',
         'date_end' => '14:00',

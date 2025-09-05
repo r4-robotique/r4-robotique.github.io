@@ -1,6 +1,10 @@
 name: Website building
 
-on: push
+# When pushing on master
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   deploy_pages:

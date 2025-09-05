@@ -65,15 +65,3 @@ function checkYear($year)
 }
 
 $results_per_page = 5;
-$year = $_GET["y"] ?? currentYear();
-$year = checkYear($year);
-
-$events = getEvents($year);
-$pages = ceil(count($events) / $results_per_page);
-
-$page = intval($_GET["p"] ?? $pages);
-
-
-$data = ['events' => array_slice($events, $results_per_page * ($page - 1), $results_per_page), "year" => $year, "page" => $page, "pages" => $pages, "years" => $available_years];
-
-return $data;

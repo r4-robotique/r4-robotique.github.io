@@ -30,7 +30,7 @@
     <ul class="pagination">
     {% for y in years %}
     <li class="page-item {% if year == y%}active{% endif %} ">
-        <a class="page-link" href="?y={{ y }}">{{ y }}</a>
+        <a class="page-link" href="{{ path(route, {'y': y, 'p': 1}) }}">{{ y }}</a>
     </li>
     {% endfor %}
     </ul>

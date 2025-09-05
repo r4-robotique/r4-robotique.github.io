@@ -1,4 +1,5 @@
 <?php
 
-include(__DIR__.'/../ical.php');
-exit();
+return [
+    "contents" => include(__DIR__ . '/../ical.php')
+];

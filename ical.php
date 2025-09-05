@@ -1,5 +1,7 @@
 <?php
 
+$just_first = $route == "/next";
+
 use Spatie\IcalendarGenerator\Components\Calendar;
 use Spatie\IcalendarGenerator\Components\Event;
 
@@ -36,5 +38,5 @@ foreach ($events as $event) {
     if ($just_first && !$event['passed']) break;
 }
 
-header('Content-type: text/calendar');
-echo $calendar->get();
+// header('Content-type: text/calendar');
+return $calendar->get();

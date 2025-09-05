@@ -1,7 +1,7 @@
 <?php
 
-include(__DIR__ . "/_events.php");
-include(__DIR__ . "/_paginate.php");
+include_once(__DIR__ . "/_events.php");
+include_once(__DIR__ . "/_paginate.php");
 
 $events = [];
 foreach ($available_years as $year) {

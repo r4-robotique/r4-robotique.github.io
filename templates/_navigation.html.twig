@@ -2,15 +2,15 @@
 <nav aria-label="Pages">
 <ul class="pagination">
     {% if page > 1 %}
-    <li class="page-item"><a class="page-link previous-page" href="?y={{ year }}&p={{ page-1 }}">&laquo;</a></li>
+    <li class="page-item"><a class="page-link previous-page" href="{{ path(route, {'y': year, 'p': page-1}) }}">&laquo;</a></li>
     {% endif %}
     {% for p in 1..pages %}
     <li rel="{{ p }}" class="page-item change-page {% if p == page %}active{% endif %}">
-        <a class="page-link" href="?y={{ year }}&p={{ p }}">{{ p }}</a>
+        <a class="page-link" href="{{ path(route, {'y': year, 'p': p}) }}">{{ p }}</a>
     </li>
     {% endfor %}
     {% if page < pages %}
-    <li class="page-item"><a class="page-link next-page" href="?y={{ year }}&p={{ page+1 }}">&raquo;</a></li>
+    <li class="page-item"><a class="page-link next-page" href="{{ path(route, {'y': year, 'p': page+1}) }}">&raquo;</a></li>
     {% endif %}
 </ul>
 </nav>

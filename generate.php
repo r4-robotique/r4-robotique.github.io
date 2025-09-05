@@ -83,6 +83,7 @@ function generate($tpl, $route, $data, array $params = []): array
 $output_directory = __DIR__ . '/web';
 
 foreach ($routes as $route => list($tpl, $data_file)) {
+    $params = [];
     $data = $data_file ? @include 'data/' . $data_file : [];
     $data = generate($tpl, $route, $data);
 

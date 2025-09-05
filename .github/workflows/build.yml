@@ -27,11 +27,12 @@ jobs:
         run: make
 
       # Deploying to GitHub pages
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
-          # upload entire directory
-          path: 'web'
+          path: web/
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4

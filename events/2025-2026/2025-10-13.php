@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "Methodes d'optimisation d'ordre zero pour la robotique",
+        'title' => "Handling Contact and Constraints in MPC for Legged Robots",
         'speakers' => 'Armand Jordana',
         'date_start' => '13:00',
         'date_end' => '14:00',

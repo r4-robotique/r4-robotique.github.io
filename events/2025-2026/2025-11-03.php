@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "Applied Robotics for Biomechanics",
+        'title' => "Applied Robotics for Ex Vivo Joint Biomechanical Analyses.",
         'speakers' => 'Florent Moissenet',
         'date_start' => '13:00',
         'date_end' => '14:00',

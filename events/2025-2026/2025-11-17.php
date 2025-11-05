@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "TBA",
+        'title' => "Modeling human sensorimotor control for optimizing human-robot interaction",
         'speakers' => 'Bastien Berret',
         'date_start' => '13:00',
         'date_end' => '14:00',

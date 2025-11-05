@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "TBA",
+        'title' => "The role of time in developing symbiotic human-robot interactive control",
         'speakers' => 'Dorian Verel',
         'date_start' => '13:00',
         'date_end' => '14:00',

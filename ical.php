@@ -7,7 +7,8 @@ use Spatie\IcalendarGenerator\Components\Event;
 
 include(__DIR__ . '/vendor/autoload.php');
 $data = include(__DIR__ . '/data/events.php');
-$events = $data['events'];
+$events = $allEvents;
+
 if (!isset($just_first)) {
     $just_first = false;
 }

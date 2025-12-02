@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "TBA",
+        'title' => "Modelling human movement neuromechanics for generalisable human-robot interfaces",
         'speakers' => 'Massimo Sartori',
         'date_start' => '13:00',
         'date_end' => '14:00',

@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "TBA",
+        'title' => " From locomotion biomechanics to the design of assistive device for people with disabilities",
         'speakers' => 'Xavier Bonnet & Hélène Pillet',
         'date_start' => '13:00',
         'date_end' => '14:00',

@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "TBA",
+        'title' => "Hybrid Humanoid Design and Control.",
         'speakers' => 'Melya Boukheddimi',
         'date_start' => '13:00',
         'date_end' => '14:00',

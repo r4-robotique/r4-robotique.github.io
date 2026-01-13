@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "TBA",
+        'title' => "Identifying Cyclist Control Actions via Direct Collocation",
         'speakers' => 'Jason K. Moore & Jules Ronné',
         'date_start' => '13:00',
         'date_end' => '14:00',

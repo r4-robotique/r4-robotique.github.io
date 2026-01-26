@@ -2,7 +2,7 @@
 
 return [
     [
-        'title' => "TBA",
+        'title' => "L'innovation tirée par le bien-être: un avenir (im)possible? ",
         'speakers' => 'Yuko Tamaki-Welply',
         'date_start' => '13:00',
         'date_end' => '14:00',

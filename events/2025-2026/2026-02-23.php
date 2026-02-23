@@ -8,5 +8,6 @@ return [
   'date_end' => '14:00', 
   'where' => 'Remote', 
   'visio' => 'https://rendez-vous.renater.fr/r4-robotique', 
+  'youtube' => 'sSHtDUiek_A'
   ], 
 ];

@@ -8,5 +8,6 @@ return [
         'date_end' => '14:00',
         'where' => 'Remote',
         'visio' => 'https://visio.numerique.gouv.fr/jkn-qjkd-yiu',
+        'youtube' => 'https://youtu.be/CHn0ziq5adU',
     ],
 ];

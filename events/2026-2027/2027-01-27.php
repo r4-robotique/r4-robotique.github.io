@@ -2,8 +2,8 @@
 
 return [
     [
-        'title' => "On the use of an absolute geometric representation for the numerical simulation of multibody systems",
-        'speakers' => 'Olivier Bruls',
+        'title' => "Gradient based optimization of multibody systems and applications",
+        'speakers' => 'Daniel Dopico (Université de Coruna - Spain)',
         'date_start' => '13:00',
         'date_end' => '14:00',
         'where' => 'Remote',

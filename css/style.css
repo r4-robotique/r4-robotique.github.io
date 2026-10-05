@@ -64,6 +64,56 @@ a:hover {
     border: 1px solid rgba(14, 116, 144, 0.15);
 }
 
+/* Index jumbotron: intro on top, booklet advertised below on white */
+.jumbotron.bg-na {
+    overflow: hidden;
+}
+
+.jumbotron-intro,
+.jumbotron-booklet {
+    margin: 0;
+    padding: 1.25rem .5rem;
+}
+
+.jumbotron-booklet {
+    background: #fff;
+    border-top: 3px solid #e30613;
+}
+
+.booklet-tag {
+    display: inline-block;
+    margin-bottom: .4rem;
+    padding: .15rem .6rem;
+    background: #e30613;
+    color: #fff;
+    font-size: .75rem;
+    font-weight: bold;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.booklet-cover {
+    display: inline-block;
+    position: relative;
+    max-width: 120px;
+    width: 100%;
+    transform: rotate(2.5deg);
+    transition: transform .25s ease, box-shadow .25s ease;
+    box-shadow: -5px 5px 0 #e30613, 0 6px 16px rgba(22, 51, 62, 0.35);
+}
+
+.booklet-cover:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow: -3px 3px 0 #e30613, 0 10px 22px rgba(22, 51, 62, 0.4);
+}
+
+.booklet-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .card {
     border-color: rgba(22, 51, 62, 0.12);
     box-shadow: 0 1px 3px rgba(22, 51, 62, 0.06);

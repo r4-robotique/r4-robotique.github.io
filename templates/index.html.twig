@@ -2,8 +2,8 @@
 
 {% block body %}
 
-<div class="jumbotron mb-2 bg-na">
-  <div class="row">
+<div class="jumbotron mb-2 bg-na p-0">
+  <div class="row align-items-center jumbotron-intro">
     <div class="col-md-3 text-center">
         <a href="https://www.nouvelle-aquitaine.fr/" target="_blank">
             <img src="{{ asset('img/nouvelle-aquitaine.png') }}" />
@@ -13,11 +13,32 @@
         <h1 class="display-8">
             Robotics research in Nouvelle-Aquitaine, France
         </h1>
-        <p class="lead">
+        <p class="lead mb-0">
             R4 is a regional robotics network involving 12 research entities in the region of Nouvelle-Aquitaine,
             France. The objective of the network is to boost research activities, mainly through a weekly
             <a href="{{ path('/working-group') }}">working group</a>.
         </p>
+    </div>
+  </div>
+  <div class="row align-items-center jumbotron-booklet">
+    <div class="col-md-3 text-center">
+        <a class="booklet-cover" href="{{ asset('files/livret_R4.pdf') }}" target="_blank"
+           title="Livret R4 — Réseau Régional de Recherche en Robotique 2021-2026">
+            <img src="{{ asset('img/livret_R4_cover.jpg') }}"
+                 alt="Cover of the R4 booklet: Réseau Régional de Recherche en Robotique 2021-2026" />
+        </a>
+    </div>
+    <div class="col-md-9 mt-3 mt-md-0">
+        <span class="booklet-tag">{% if date() < date('2027-02-01') %}New · {% endif %}Booklet 2021 – 2026</span>
+        <h2 class="h4 mb-2">Five years of robotics, together</h2>
+        <p class="mb-2">
+            Collaborative robots, agricultural and space robotics, humanoids, physical AI&hellip;
+            Discover the research teams, joint projects, PhD theses, seminars, trainings and public events
+            that have brought the R4 community to life since 2021, and where we are heading next.
+        </p>
+        <a class="btn btn-primary btn-sm" href="{{ asset('files/livret_R4.pdf') }}" target="_blank">
+            Browse the booklet (PDF, in French) &rarr;
+        </a>
     </div>
   </div>
 </div>

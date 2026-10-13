@@ -1,0 +1,14 @@
+[
+  {"id": "legged-locomotion", "label": "Legged & humanoid locomotion", "description": "Bipeds, quadrupeds and humanoid robots: walking, gait generation, balance, whole-body control"},
+  {"id": "optimal-control", "label": "Optimal control & MPC", "description": "Trajectory optimization, model predictive control, numerical optimization and solvers, optimization-based control"},
+  {"id": "learning", "label": "Machine learning & AI", "description": "Reinforcement learning, deep learning, imitation and interactive learning, sim2real, neural networks, AI for robotics"},
+  {"id": "human-robot-interaction", "label": "Human-robot interaction & cobotics", "description": "Physical and social human-robot interaction, collaboration, co-manipulation, ergonomics, human intention and behaviour prediction"},
+  {"id": "wearable-robotics", "label": "Exoskeletons, rehabilitation & assistive devices", "description": "Exoskeletons, prostheses, orthoses, rehabilitation robots, wheelchairs and other assistive technology"},
+  {"id": "human-movement", "label": "Biomechanics & human motor control", "description": "Human movement analysis and modeling, musculoskeletal models, neuromechanics, sensorimotor control, motion capture"},
+  {"id": "modeling-software", "label": "Modeling, simulation & software", "description": "Rigid and flexible body dynamics, kinematics, simulation, contact models, robotics libraries and software architectures"},
+  {"id": "design-mechanisms", "label": "Robot design, mechanisms & mechatronics", "description": "Mechanical design, actuators, co-design, parallel, cable-driven, continuum, soft and redundant robots, robot platforms"},
+  {"id": "perception", "label": "Perception, vision & state estimation", "description": "Computer vision, cameras and other sensors, object detection, pose estimation, localization, SLAM, sensor fusion"},
+  {"id": "manipulation", "label": "Manipulation, teleoperation & haptics", "description": "Robot arms, grasping, object manipulation, force control, teleoperation, shared control, haptic interfaces"},
+  {"id": "mobile-field", "label": "Aerial, marine, space & field robotics", "description": "Drones, underwater and space robots, autonomous vehicles, multi-robot systems, agriculture, construction, nuclear and industrial applications"},
+  {"id": "society", "label": "Ethics, society & labs", "description": "Ethics, robots in society, uses and regulation, jobs, bio-inspiration and neuroscience outlooks, presentations of labs and institutions"}
+]

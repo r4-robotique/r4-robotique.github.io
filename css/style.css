@@ -263,3 +263,30 @@ footer img:hover {
 .events-page.current-page {
     display:inline;
 }
+
+/* Videos: categories used as filters below the search bar, and as pills on the videos */
+#videos-categories .videos-category {
+    border-radius: 10rem;
+    margin: 0 0.25rem 0.35rem 0;
+}
+
+#videos-categories .videos-category.active {
+    background-color: var(--r4-primary);
+    border-color: var(--r4-primary);
+    color: #fff;
+}
+
+.videos-pills {
+    margin-top: 0.35rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.videos-pills .videos-category {
+    font-weight: normal;
+    margin-right: 0.2rem;
+}
+
+.videos-pills .videos-category.active {
+    background-color: var(--r4-primary);
+}

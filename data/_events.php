@@ -65,6 +65,31 @@ function getVideoEvents()
     return array_reverse($events);
 }
 
+// The thematic categories of the videos
+function getCategories()
+{
+    return json_decode(file_get_contents(__DIR__ . '/../keywords/categories.json'), true);
+}
+
+// Keywords of a video: the words of its transcript with their number of occurrences, and the
+// extra keywords and categories written from the understanding of it (see update_keywords.sh)
+function getVideoKeywords($video)
+{
+    $result = ['keywords' => [], 'extra' => [], 'categories' => []];
+    $file = __DIR__ . '/../keywords/' . $video . '.json';
+
+    if (file_exists($file)) {
+        $result['keywords'] = json_decode(file_get_contents($file), true)['keywords'] ?? [];
+    }
+    if (file_exists($file . '_extra.json')) {
+        $extra = json_decode(file_get_contents($file . '_extra.json'), true);
+        $result['extra'] = $extra['keywords'] ?? [];
+        $result['categories'] = $extra['categories'] ?? [];
+    }
+
+    return $result;
+}
+
 function currentYear()
 {
     global $available_dirs;

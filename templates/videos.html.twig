@@ -7,8 +7,14 @@
 
     <div class="videos-search my-3">
         <input type="search" id="videos-search" class="form-control form-control-lg"
-            placeholder="Search videos (title, speaker, abstract...)" aria-label="Search videos"
+            placeholder="Search videos (title, speaker, abstract, transcript...)" aria-label="Search videos"
             autocomplete="off" data-index="{{ path('/videos-index') }}" />
+        <div id="videos-categories" class="mt-2">
+            {% for category in categories %}
+            <button type="button" class="btn btn-sm btn-outline-secondary videos-category"
+                data-category="{{ category.id }}" title="{{ category.description }}" aria-pressed="false">{{ category.label }}</button>
+            {% endfor %}
+        </div>
         <div id="videos-search-status" class="text-muted mt-2" aria-live="polite"></div>
     </div>
 
@@ -36,6 +42,14 @@
                     <span class="badge badge-warning">{{ event.date_start|date("Y-m-d") }}</span>
                 </span>
                 </small>
+                {% if event.categories %}
+                <div class="videos-pills">
+                    {% for category in event.categories %}
+                    <a class="badge badge-pill badge-secondary videos-category" data-category="{{ category.id }}"
+                        href="{{ path('/videos') }}?c={{ category.id }}">{{ category.label }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
             </h4>
             </div>
             </div>

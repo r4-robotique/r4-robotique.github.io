@@ -290,3 +290,16 @@ footer img:hover {
 .videos-pills .videos-category.active {
     background-color: var(--r4-primary);
 }
+
+/* Speakers */
+.speakers-letters .btn {
+    min-width: 2.2rem;
+    margin: 0 0.15rem 0.3rem 0;
+}
+
+.speakers-letter {
+    margin-top: 1.5rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--r4-primary);
+    color: var(--r4-primary);
+}

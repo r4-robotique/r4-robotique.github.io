@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2 class="d-flex flex-wrap justify-content-between align-items-center">
+    Working group speakers
+    <a class="btn btn-primary" href="{{ path('/videos') }}">Archive videos</a>
+    </h2>
+
+    <p class="text-muted">
+        The {{ count }} speakers of the working group, in alphabetical order.
+    </p>
+
+    <nav class="speakers-letters my-3" aria-label="Letters">
+        {% for letter, speakers in letters %}
+        <a class="btn btn-sm btn-outline-secondary" href="#speakers-{{ letter }}">{{ letter }}</a>
+        {% endfor %}
+    </nav>
+
+    {% for letter, speakers in letters %}
+    <h3 id="speakers-{{ letter }}" class="speakers-letter">{{ letter }}</h3>
+
+    <ul class="list-unstyled speakers-list">
+        {% for speaker in speakers %}
+        <li class="mb-3">
+            <strong>{{ speaker.name }}</strong>
+            {% if speaker.affiliation %}
+            <span class="text-muted">({{ speaker.affiliation }})</span>
+            {% endif %}
+            <ul class="list-unstyled pl-3">
+                {% for talk in speaker.talks %}
+                <li>
+                    <span class="badge badge-warning">{{ talk.date }}</span>
+                    {{ talk.title|raw }}
+                    {% if talk.youtube %}
+                    <a class="badge badge-danger" href="https://www.youtube.com/watch?v={{ talk.youtube }}" target="_blank">Video</a>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+
+{% endblock %}

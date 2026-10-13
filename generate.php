@@ -8,6 +8,7 @@ $routes = [
     '/working-group' => ['working-group.html.twig', 'events.php'],
     '/videos' => ['videos.html.twig', 'all-events.php'],
     '/videos-index' => ['', 'videos-index.php'],
+    '/speakers' => ['speakers.html.twig', 'speakers.php'],
     '/workshop' => ['workshop.html.twig', null],
     '/workshop-videos' => ['workshop-videos.html.twig', 'videos.php'],
 

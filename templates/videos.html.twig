@@ -5,6 +5,16 @@
     Working group archive videos
     </h2>
 
+    <div class="videos-search my-3">
+        <input type="search" id="videos-search" class="form-control form-control-lg"
+            placeholder="Search videos (title, speaker, abstract...)" aria-label="Search videos"
+            autocomplete="off" data-index="{{ path('/videos-index') }}" />
+        <div id="videos-search-status" class="text-muted mt-2" aria-live="polite"></div>
+    </div>
+
+    <div id="videos-search-results" class="row" hidden></div>
+
+    <div id="videos-listing">
     {% include '_navigation.html.twig' %}
 
     <div class="row">
@@ -44,5 +54,10 @@
     </div>
 
     {% include '_navigation.html.twig' %}
+    </div>
 
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset('js/videos-search.js') }}"></script>
 {% endblock %}

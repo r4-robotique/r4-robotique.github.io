@@ -48,6 +48,23 @@ function getEvents($year)
     return $events;
 }
 
+// All the events that have a video, most recent first
+function getVideoEvents()
+{
+    global $available_years;
+
+    $events = [];
+    foreach ($available_years as $year) {
+        foreach (getEvents($year) as $event) {
+            if (isset($event["youtube"])) {
+                $events[] = $event;
+            }
+        }
+    }
+
+    return array_reverse($events);
+}
+
 function currentYear()
 {
     global $available_dirs;

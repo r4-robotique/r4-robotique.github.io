@@ -3,16 +3,7 @@
 include_once(__DIR__ . "/_events.php");
 include_once(__DIR__ . "/_paginate.php");
 
-$events = [];
-foreach ($available_years as $year) {
-    foreach (getEvents($year) as $event) {
-        if (isset($event["youtube"])) {
-            $events[] = $event;
-        }
-    }
-}
-
-$events = array_reverse($events);
+$events = getVideoEvents();
 
 list($events, $page, $pages) = paginate($events, 10);
 

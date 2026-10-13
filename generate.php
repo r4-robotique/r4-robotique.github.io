@@ -7,6 +7,7 @@ $routes = [
     '/cover' => ['cover.html.twig', 'entities.php'],
     '/working-group' => ['working-group.html.twig', 'events.php'],
     '/videos' => ['videos.html.twig', 'all-events.php'],
+    '/videos-index' => ['', 'videos-index.php'],
     '/workshop' => ['workshop.html.twig', null],
     '/workshop-videos' => ['workshop-videos.html.twig', 'videos.php'],
 
@@ -40,6 +41,10 @@ function routeToFilename($route, $params = [])
 
     if ($route == '/ical' || $route == '/next') {
         $ext = "ics";
+    }
+
+    if ($route == '/videos-index') {
+        $ext = "json";
     }
 
     if ($params) {

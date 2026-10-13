@@ -7,6 +7,7 @@ $routes = [
     '/cover' => ['cover.html.twig', 'entities.php'],
     '/working-group' => ['working-group.html.twig', 'events.php'],
     '/videos' => ['videos.html.twig', 'all-events.php'],
+    '/videos-index' => ['', 'videos-index.php'],
     '/workshop' => ['workshop.html.twig'],
     '/workshop-videos' => ['workshop-videos.html.twig', 'videos.php'],
 
@@ -50,4 +51,6 @@ $data['route'] = $route;
 
 if ($routes[$route][0]) {
     echo $twig->render($routes[$route][0], $data);
+} else if (isset($data['contents'])) {
+    echo $data['contents'];
 }

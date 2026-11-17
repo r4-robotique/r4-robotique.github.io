@@ -2,8 +2,8 @@
 
 return [
     [
-        'title' => " Toward Structured Physical Intelligence in Robotics",
-        'speakers' => 'Sebastien Kleff (Inria Bordeaux, Auctus Team)',
+        'title' => "The GORT Project en Français",
+        'speakers' => 'Adeline Masson',
         'date_start' => '13:00',
         'date_end' => '14:00',
         'where' => 'Remote',
